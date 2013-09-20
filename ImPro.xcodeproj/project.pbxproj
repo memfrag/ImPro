@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B93835417E4C49C00430998 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B93835317E4C49C00430998 /* Cocoa.framework */; };
+		5B93835E17E4C49C00430998 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B93835C17E4C49C00430998 /* InfoPlist.strings */; };
+		5B93836017E4C49C00430998 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B93835F17E4C49C00430998 /* main.m */; };
+		5B93836417E4C49C00430998 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5B93836217E4C49C00430998 /* Credits.rtf */; };
+		5B93836717E4C49C00430998 /* MJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B93836617E4C49C00430998 /* MJAppDelegate.m */; };
+		5B93836A17E4C49C00430998 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B93836817E4C49C00430998 /* MainMenu.xib */; };
+		5B93837517E4C6FF00430998 /* MJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B93837417E4C6FF00430998 /* MJViewController.m */; };
+		5B93837B17E4D47500430998 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B93837A17E4D47500430998 /* OpenGL.framework */; };
+		5B93837C17E4D49C00430998 /* gpufilter.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B93837717E4D37F00430998 /* gpufilter.c */; };
+		5B93837E17E4DDD000430998 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B93837D17E4DDD000430998 /* GLKit.framework */; };
+		5B9383B817E51E5C00430998 /* Isolate Neon OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5B9383B317E51BDF00430998 /* Isolate Neon OS X.fsh */; };
+		5B9383B917E51E5C00430998 /* Visualize AB OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5B9383B517E51C5E00430998 /* Visualize AB OS X.fsh */; };
+		5B9383BC17E5260200430998 /* Pass-through OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5B9383BA17E525D500430998 /* Pass-through OS X.fsh */; };
+		5B9383BF17E52A8F00430998 /* Maximize L OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5B9383BD17E529F100430998 /* Maximize L OS X.fsh */; };
+		5B9383C417E52C0900430998 /* Visualize Hue OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5B9383C217E52B8200430998 /* Visualize Hue OS X.fsh */; };
+		5B9383D017E653AF00430998 /* RGB to HSV OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5B9383CE17E653A700430998 /* RGB to HSV OS X.fsh */; };
+		5B9383D417E6571300430998 /* Isolate Neon Color OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5B9383D117E656F200430998 /* Isolate Neon Color OS X.fsh */; };
+		5B9383D717E65D4C00430998 /* Quantize 8 OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5B9383D517E65D4000430998 /* Quantize 8 OS X.fsh */; };
+		5B9383DA17E662F700430998 /* RGB to CGA OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5B9383D817E662ED00430998 /* RGB to CGA OS X.fsh */; };
+		5B9383E017E66CE800430998 /* Outer Levels OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5B9383DE17E66CDC00430998 /* Outer Levels OS X.fsh */; };
+		5B9383E317E670EC00430998 /* ConSatBri OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5B9383E117E670E100430998 /* ConSatBri OS X.fsh */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5B93835017E4C49C00430998 /* ImPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B93835317E4C49C00430998 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5B93835617E4C49C00430998 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		5B93835717E4C49C00430998 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5B93835817E4C49C00430998 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5B93835B17E4C49C00430998 /* ImPro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImPro-Info.plist"; sourceTree = "<group>"; };
+		5B93835D17E4C49C00430998 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5B93835F17E4C49C00430998 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B93836117E4C49C00430998 /* ImPro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImPro-Prefix.pch"; sourceTree = "<group>"; };
+		5B93836317E4C49C00430998 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		5B93836517E4C49C00430998 /* MJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJAppDelegate.h; sourceTree = "<group>"; };
+		5B93836617E4C49C00430998 /* MJAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJAppDelegate.m; sourceTree = "<group>"; };
+		5B93836917E4C49C00430998 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5B93837317E4C6FF00430998 /* MJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJViewController.h; sourceTree = "<group>"; };
+		5B93837417E4C6FF00430998 /* MJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJViewController.m; sourceTree = "<group>"; };
+		5B93837717E4D37F00430998 /* gpufilter.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = gpufilter.c; sourceTree = "<group>"; };
+		5B93837917E4D38D00430998 /* gpufilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gpufilter.h; sourceTree = "<group>"; };
+		5B93837A17E4D47500430998 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		5B93837D17E4DDD000430998 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		5B9383B217E50DD200430998 /* shaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shaders.h; sourceTree = "<group>"; };
+		5B9383B317E51BDF00430998 /* Isolate Neon OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Isolate Neon OS X.fsh"; sourceTree = "<group>"; };
+		5B9383B517E51C5E00430998 /* Visualize AB OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Visualize AB OS X.fsh"; sourceTree = "<group>"; };
+		5B9383BA17E525D500430998 /* Pass-through OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Pass-through OS X.fsh"; sourceTree = "<group>"; };
+		5B9383BD17E529F100430998 /* Maximize L OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Maximize L OS X.fsh"; sourceTree = "<group>"; };
+		5B9383C217E52B8200430998 /* Visualize Hue OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Visualize Hue OS X.fsh"; sourceTree = "<group>"; };
+		5B9383CE17E653A700430998 /* RGB to HSV OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "RGB to HSV OS X.fsh"; sourceTree = "<group>"; };
+		5B9383D117E656F200430998 /* Isolate Neon Color OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Isolate Neon Color OS X.fsh"; sourceTree = "<group>"; };
+		5B9383D517E65D4000430998 /* Quantize 8 OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Quantize 8 OS X.fsh"; sourceTree = "<group>"; };
+		5B9383D817E662ED00430998 /* RGB to CGA OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "RGB to CGA OS X.fsh"; sourceTree = "<group>"; };
+		5B9383DE17E66CDC00430998 /* Outer Levels OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Outer Levels OS X.fsh"; sourceTree = "<group>"; };
+		5B9383E117E670E100430998 /* ConSatBri OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "ConSatBri OS X.fsh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B93834D17E4C49C00430998 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B93837E17E4DDD000430998 /* GLKit.framework in Frameworks */,
+				5B93837B17E4D47500430998 /* OpenGL.framework in Frameworks */,
+				5B93835417E4C49C00430998 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B93834717E4C49C00430998 = {
+			isa = PBXGroup;
+			children = (
+				5B93835917E4C49C00430998 /* ImPro */,
+				5B93835217E4C49C00430998 /* Frameworks */,
+				5B93835117E4C49C00430998 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B93835117E4C49C00430998 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B93835017E4C49C00430998 /* ImPro.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B93835217E4C49C00430998 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B93837D17E4DDD000430998 /* GLKit.framework */,
+				5B93837A17E4D47500430998 /* OpenGL.framework */,
+				5B93835317E4C49C00430998 /* Cocoa.framework */,
+				5B93835517E4C49C00430998 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B93835517E4C49C00430998 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B93835617E4C49C00430998 /* AppKit.framework */,
+				5B93835717E4C49C00430998 /* CoreData.framework */,
+				5B93835817E4C49C00430998 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		5B93835917E4C49C00430998 /* ImPro */ = {
+			isa = PBXGroup;
+			children = (
+				5B9383B717E51C6100430998 /* Shaders */,
+				5B93836517E4C49C00430998 /* MJAppDelegate.h */,
+				5B93836617E4C49C00430998 /* MJAppDelegate.m */,
+				5B93837317E4C6FF00430998 /* MJViewController.h */,
+				5B93837417E4C6FF00430998 /* MJViewController.m */,
+				5B9383B217E50DD200430998 /* shaders.h */,
+				5B93837917E4D38D00430998 /* gpufilter.h */,
+				5B93837717E4D37F00430998 /* gpufilter.c */,
+				5B93836817E4C49C00430998 /* MainMenu.xib */,
+				5B93835A17E4C49C00430998 /* Supporting Files */,
+			);
+			path = ImPro;
+			sourceTree = "<group>";
+		};
+		5B93835A17E4C49C00430998 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B93835B17E4C49C00430998 /* ImPro-Info.plist */,
+				5B93835C17E4C49C00430998 /* InfoPlist.strings */,
+				5B93835F17E4C49C00430998 /* main.m */,
+				5B93836117E4C49C00430998 /* ImPro-Prefix.pch */,
+				5B93836217E4C49C00430998 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B9383B717E51C6100430998 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				5B9383BA17E525D500430998 /* Pass-through OS X.fsh */,
+				5B9383BD17E529F100430998 /* Maximize L OS X.fsh */,
+				5B9383B517E51C5E00430998 /* Visualize AB OS X.fsh */,
+				5B9383C217E52B8200430998 /* Visualize Hue OS X.fsh */,
+				5B9383B317E51BDF00430998 /* Isolate Neon OS X.fsh */,
+				5B9383D117E656F200430998 /* Isolate Neon Color OS X.fsh */,
+				5B9383CE17E653A700430998 /* RGB to HSV OS X.fsh */,
+				5B9383D517E65D4000430998 /* Quantize 8 OS X.fsh */,
+				5B9383D817E662ED00430998 /* RGB to CGA OS X.fsh */,
+				5B9383DE17E66CDC00430998 /* Outer Levels OS X.fsh */,
+				5B9383E117E670E100430998 /* ConSatBri OS X.fsh */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B93834F17E4C49C00430998 /* ImPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B93836D17E4C49C00430998 /* Build configuration list for PBXNativeTarget "ImPro" */;
+			buildPhases = (
+				5B93834C17E4C49C00430998 /* Sources */,
+				5B93834D17E4C49C00430998 /* Frameworks */,
+				5B93834E17E4C49C00430998 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImPro;
+			productName = ImPro;
+			productReference = 5B93835017E4C49C00430998 /* ImPro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B93834817E4C49C00430998 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MJ;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Martin Johannesson";
+			};
+			buildConfigurationList = 5B93834B17E4C49C00430998 /* Build configuration list for PBXProject "ImPro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5B93834717E4C49C00430998;
+			productRefGroup = 5B93835117E4C49C00430998 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B93834F17E4C49C00430998 /* ImPro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B93834E17E4C49C00430998 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9383E317E670EC00430998 /* ConSatBri OS X.fsh in Resources */,
+				5B9383E017E66CE800430998 /* Outer Levels OS X.fsh in Resources */,
+				5B9383DA17E662F700430998 /* RGB to CGA OS X.fsh in Resources */,
+				5B9383D717E65D4C00430998 /* Quantize 8 OS X.fsh in Resources */,
+				5B9383D417E6571300430998 /* Isolate Neon Color OS X.fsh in Resources */,
+				5B9383D017E653AF00430998 /* RGB to HSV OS X.fsh in Resources */,
+				5B9383C417E52C0900430998 /* Visualize Hue OS X.fsh in Resources */,
+				5B9383BF17E52A8F00430998 /* Maximize L OS X.fsh in Resources */,
+				5B9383BC17E5260200430998 /* Pass-through OS X.fsh in Resources */,
+				5B9383B817E51E5C00430998 /* Isolate Neon OS X.fsh in Resources */,
+				5B9383B917E51E5C00430998 /* Visualize AB OS X.fsh in Resources */,
+				5B93835E17E4C49C00430998 /* InfoPlist.strings in Resources */,
+				5B93836417E4C49C00430998 /* Credits.rtf in Resources */,
+				5B93836A17E4C49C00430998 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B93834C17E4C49C00430998 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B93836017E4C49C00430998 /* main.m in Sources */,
+				5B93836717E4C49C00430998 /* MJAppDelegate.m in Sources */,
+				5B93837517E4C6FF00430998 /* MJViewController.m in Sources */,
+				5B93837C17E4D49C00430998 /* gpufilter.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5B93835C17E4C49C00430998 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B93835D17E4C49C00430998 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5B93836217E4C49C00430998 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B93836317E4C49C00430998 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		5B93836817E4C49C00430998 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B93836917E4C49C00430998 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B93836B17E4C49C00430998 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5B93836C17E4C49C00430998 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5B93836E17E4C49C00430998 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImPro/ImPro-Prefix.pch";
+				INFOPLIST_FILE = "ImPro/ImPro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5B93836F17E4C49C00430998 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImPro/ImPro-Prefix.pch";
+				INFOPLIST_FILE = "ImPro/ImPro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B93834B17E4C49C00430998 /* Build configuration list for PBXProject "ImPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B93836B17E4C49C00430998 /* Debug */,
+				5B93836C17E4C49C00430998 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B93836D17E4C49C00430998 /* Build configuration list for PBXNativeTarget "ImPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B93836E17E4C49C00430998 /* Debug */,
+				5B93836F17E4C49C00430998 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B93834817E4C49C00430998 /* Project object */;
+}
