@@ -46,8 +46,8 @@
 		5B93836917E4C49C00430998 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5B93837317E4C6FF00430998 /* MJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJViewController.h; sourceTree = "<group>"; };
 		5B93837417E4C6FF00430998 /* MJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJViewController.m; sourceTree = "<group>"; };
-		5B93837717E4D37F00430998 /* gpufilter.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = gpufilter.c; sourceTree = "<group>"; };
-		5B93837917E4D38D00430998 /* gpufilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gpufilter.h; sourceTree = "<group>"; };
+		5B93837717E4D37F00430998 /* gpufilter.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = gpufilter.c; path = gpufilter/gpufilter.c; sourceTree = "<group>"; };
+		5B93837917E4D38D00430998 /* gpufilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gpufilter.h; path = gpufilter/gpufilter.h; sourceTree = "<group>"; };
 		5B93837A17E4D47500430998 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		5B93837D17E4DDD000430998 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		5B9383B217E50DD200430998 /* shaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shaders.h; sourceTree = "<group>"; };

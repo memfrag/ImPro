@@ -1,3 +1,25 @@
+/*
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2013 Martin Johannesson
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ * the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
 
 #include "gpufilter.h"
 
@@ -62,7 +84,7 @@ const char *kGPUDefaultFragmentShaderCode = SHADER_STRING
  
  void main() {
      gl_FragColor = texture2D(texture, uv);
-     gl_FragColor = gl_FragColor.brga;
+     gl_FragColor = gl_FragColor.rgba;
  }
  );
 #else
@@ -80,6 +102,7 @@ static GLenum gpuColorFormatToGLFormat(GPUColorFormat colorFormat);
 GPUStatus gpuConfigureRenderingPipeline(void)
 {
     glDisable(GL_CULL_FACE);
+    glDisable(GL_DEPTH_TEST);
     
     GLuint positionAttribute = 0;
     glVertexAttribPointer(positionAttribute, 2, GL_FLOAT, 0, 0, vertices);
@@ -106,13 +129,13 @@ GPUStatus gpuRenderTextureToFramebufferUsingProgram(GPUTexture *texture,
         return GPUStatusInvalidProgram;
     }
     
+    glBindFramebuffer(GL_FRAMEBUFFER, framebuffer->framebufferId);
     glViewport(0, 0, framebuffer->texture.width, framebuffer->texture.height);
     
     glUseProgram(program->programId);
-    
     glUniform1i(program->textureUniformLocation, 0);
     glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, framebuffer->texture.textureId);
+    glBindTexture(GL_TEXTURE_2D, texture->textureId);
     
     for (int i = 0; i < 7; i++) {
         if (program->additionalTextures[i].textureShouldBeUsed) {
@@ -123,10 +146,8 @@ GPUStatus gpuRenderTextureToFramebufferUsingProgram(GPUTexture *texture,
     }
     
     glActiveTexture(GL_TEXTURE0);
-    
-    glBindFramebuffer(GL_FRAMEBUFFER, framebuffer->framebufferId);
-    glBindTexture(GL_TEXTURE_2D, texture->textureId);
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+
     return GPUStatusOK;
 }
 
@@ -153,9 +174,9 @@ GPUStatus gpuCreateFramebuffer(uint32_t width, uint32_t height, GPUFramebuffer *
     glBindTexture(GL_TEXTURE_2D, framebuffer->texture.textureId);
     
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE );
-    glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE );
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
     
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA,
                  GL_UNSIGNED_BYTE, NULL);
@@ -247,11 +268,13 @@ GPUStatus gpuUploadImageToTexture(uint32_t width, uint32_t height, GPUColorForma
         return GPUStatusInvalidTexture;
     }
     
-    texture->width = 0;
-    texture->height = 0;
+    texture->width = width;
+    texture->height = height;
     
     GLenum pixelFormat = gpuColorFormatToGLFormat(colorFormat);
     
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, texture->textureId);
     glTexImage2D(GL_TEXTURE_2D, 0, pixelFormat, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, pixelData);
     if (glGetError() != GL_NO_ERROR) {
         return GPUStatusUnknownError;
