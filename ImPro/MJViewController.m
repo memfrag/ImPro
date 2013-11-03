@@ -241,6 +241,8 @@ static void logFunc(const char *log)
     
     NSImage *newImage = [[[NSImage alloc] initWithCGImage:imageRef size:NSMakeSize(width, height)] copy];
     
+    CGImageRelease(imageRef);
+    
     return newImage;
 }
 
