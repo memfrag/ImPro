@@ -28,6 +28,10 @@
 		5B9383DA17E662F700430998 /* RGB to CGA OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5B9383D817E662ED00430998 /* RGB to CGA OS X.fsh */; };
 		5B9383E017E66CE800430998 /* Outer Levels OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5B9383DE17E66CDC00430998 /* Outer Levels OS X.fsh */; };
 		5B9383E317E670EC00430998 /* ConSatBri OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5B9383E117E670E100430998 /* ConSatBri OS X.fsh */; };
+		5BB1F31E191FD9CB004AD597 /* Exposure OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5BB1F31D191FD9CB004AD597 /* Exposure OS X.fsh */; };
+		5BB1F320191FDB96004AD597 /* Vignette OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5BB1F31F191FDB96004AD597 /* Vignette OS X.fsh */; };
+		5BFD3832191F8F5D00D31042 /* Barrel Distortion OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5BFD3831191F8F5D00D31042 /* Barrel Distortion OS X.fsh */; };
+		5BFD3834191F925A00D31042 /* Lens Correction OS X.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5BFD3833191F925A00D31042 /* Lens Correction OS X.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		5B9383D817E662ED00430998 /* RGB to CGA OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "RGB to CGA OS X.fsh"; sourceTree = "<group>"; };
 		5B9383DE17E66CDC00430998 /* Outer Levels OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Outer Levels OS X.fsh"; sourceTree = "<group>"; };
 		5B9383E117E670E100430998 /* ConSatBri OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "ConSatBri OS X.fsh"; sourceTree = "<group>"; };
+		5BB1F31D191FD9CB004AD597 /* Exposure OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Exposure OS X.fsh"; sourceTree = "<group>"; };
+		5BB1F31F191FDB96004AD597 /* Vignette OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Vignette OS X.fsh"; sourceTree = "<group>"; };
+		5BFD3831191F8F5D00D31042 /* Barrel Distortion OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Barrel Distortion OS X.fsh"; sourceTree = "<group>"; };
+		5BFD3833191F925A00D31042 /* Lens Correction OS X.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Lens Correction OS X.fsh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				5B9383BA17E525D500430998 /* Pass-through OS X.fsh */,
+				5BB1F31D191FD9CB004AD597 /* Exposure OS X.fsh */,
+				5BB1F31F191FDB96004AD597 /* Vignette OS X.fsh */,
 				5B9383BD17E529F100430998 /* Maximize L OS X.fsh */,
 				5B9383B517E51C5E00430998 /* Visualize AB OS X.fsh */,
 				5B9383C217E52B8200430998 /* Visualize Hue OS X.fsh */,
@@ -159,6 +169,8 @@
 				5B9383D817E662ED00430998 /* RGB to CGA OS X.fsh */,
 				5B9383DE17E66CDC00430998 /* Outer Levels OS X.fsh */,
 				5B9383E117E670E100430998 /* ConSatBri OS X.fsh */,
+				5BFD3831191F8F5D00D31042 /* Barrel Distortion OS X.fsh */,
+				5BFD3833191F925A00D31042 /* Lens Correction OS X.fsh */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -218,6 +230,8 @@
 				5B9383E317E670EC00430998 /* ConSatBri OS X.fsh in Resources */,
 				5B9383E017E66CE800430998 /* Outer Levels OS X.fsh in Resources */,
 				5B9383DA17E662F700430998 /* RGB to CGA OS X.fsh in Resources */,
+				5BFD3832191F8F5D00D31042 /* Barrel Distortion OS X.fsh in Resources */,
+				5BB1F320191FDB96004AD597 /* Vignette OS X.fsh in Resources */,
 				5B9383D717E65D4C00430998 /* Quantize 8 OS X.fsh in Resources */,
 				5B9383D417E6571300430998 /* Isolate Neon Color OS X.fsh in Resources */,
 				5B9383D017E653AF00430998 /* RGB to HSV OS X.fsh in Resources */,
@@ -225,6 +239,8 @@
 				5B9383BF17E52A8F00430998 /* Maximize L OS X.fsh in Resources */,
 				5B9383BC17E5260200430998 /* Pass-through OS X.fsh in Resources */,
 				5B9383B817E51E5C00430998 /* Isolate Neon OS X.fsh in Resources */,
+				5BB1F31E191FD9CB004AD597 /* Exposure OS X.fsh in Resources */,
+				5BFD3834191F925A00D31042 /* Lens Correction OS X.fsh in Resources */,
 				5B9383B917E51E5C00430998 /* Visualize AB OS X.fsh in Resources */,
 				5B93835E17E4C49C00430998 /* InfoPlist.strings in Resources */,
 				5B93836417E4C49C00430998 /* Credits.rtf in Resources */,

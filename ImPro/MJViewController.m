@@ -51,6 +51,8 @@ static void logFunc(const char *log)
     
     _shaders = @[
                  @{@"name" : @"Pass-through", @"fragmentShader" : [self loadString:FRAGMENT_SHADER_FILE(Pass-through) ofType:@"fsh"]},
+                 @{@"name" : @"Exposure", @"fragmentShader" : [self loadString:FRAGMENT_SHADER_FILE(Exposure) ofType:@"fsh"]},
+                 @{@"name" : @"Vignette", @"fragmentShader" : [self loadString:FRAGMENT_SHADER_FILE(Vignette) ofType:@"fsh"]},
                  @{@"name" : @"L*a*b, L=100", @"fragmentShader" : [self loadString:FRAGMENT_SHADER_FILE(Maximize L) ofType:@"fsh"]},
                  @{@"name" : @"Visualize a & b", @"fragmentShader" : [self loadString:FRAGMENT_SHADER_FILE(Visualize AB) ofType:@"fsh"]},
                  @{@"name" : @"Visualize Hue", @"fragmentShader" : [self loadString:FRAGMENT_SHADER_FILE(Visualize Hue) ofType:@"fsh"]},
@@ -61,6 +63,8 @@ static void logFunc(const char *log)
                  @{@"name" : @"CGA", @"fragmentShader" : [self loadString:FRAGMENT_SHADER_FILE(RGB to CGA) ofType:@"fsh"]},
                  @{@"name" : @"Outer Levels", @"fragmentShader" : [self loadString:FRAGMENT_SHADER_FILE(Outer Levels) ofType:@"fsh"]},
                  @{@"name" : @"ConSatBri", @"fragmentShader" : [self loadString:FRAGMENT_SHADER_FILE(ConSatBri) ofType:@"fsh"]},
+                 @{@"name" : @"Barrel Distortion", @"fragmentShader" : [self loadString:FRAGMENT_SHADER_FILE(Barrel Distortion) ofType:@"fsh"]},
+                 @{@"name" : @"Lens Correction", @"fragmentShader" : [self loadString:FRAGMENT_SHADER_FILE(Lens Correction) ofType:@"fsh"]},
     ];
     
     [self.shaderComboBox reloadData];
